@@ -1,36 +1,54 @@
 package com.github.rmkane.tools.util;
 
-import java.util.Arrays;
-import java.util.Collections;
+import static com.github.rmkane.tools.util.CollectionUtils.groupBy;
+import static com.github.rmkane.tools.util.CollectionUtils.immutableMapOf;
+import static java.util.Arrays.asList;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import org.junit.Assert;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CollectionUtilsTest {
 
-  private Function<Map<String, String>, String> getKey =
-      map -> map.entrySet().stream().findFirst().get().getKey();
+  private static final Logger logger = LoggerFactory.getLogger(CollectionUtilsTest.class);
 
-  private Function<Map<String, String>, String> getValue =
-      map -> map.entrySet().stream().findFirst().get().getValue();
+  private static final List<Map<String, String>> data =
+      asList(
+          immutableMapOf("Username", "Batman", "Role", "Leader"),
+          immutableMapOf("Username", "Robin", "Role", "Subordinate"),
+          immutableMapOf("Username", "Superman", "Role", "Leader"));
 
   @Test
   public void testGroupBy() {
-    List<Map<String, String>> listOfData =
-        Arrays.asList(
-            Collections.singletonMap("A", "1"),
-            Collections.singletonMap("A", "2"),
-            Collections.singletonMap("B", "3"));
+    logger.info("Test groupBy(Collection<E>, Function<E, K>, Function<E, V>)");
+    Map<String, List<String>> grouped = groupBy(data, m -> m.get("Role"), m -> m.get("Username"));
 
-    Map<String, List<String>> grouped = CollectionUtils.groupBy(listOfData, getKey, getValue);
+    logger.info("Checking keys...");
+    assertNotNull(grouped.get("Leader"));
+    assertNotNull(grouped.get("Subordinate"));
 
-    Assert.assertNotNull(grouped.get("A"));
-    Assert.assertNotNull(grouped.get("B"));
+    logger.info("Checking values...");
+    assertEquals("Batman", grouped.get("Leader").get(0));
+    assertEquals("Superman", grouped.get("Leader").get(1));
+    assertEquals("Robin", grouped.get("Subordinate").get(0));
+  }
 
-    Assert.assertEquals("1", grouped.get("A").get(0));
-    Assert.assertEquals("2", grouped.get("A").get(1));
-    Assert.assertEquals("3", grouped.get("B").get(0));
+  @Test
+  public void testGroupBySimple() {
+    logger.info("Test groupBy(Collection<E>, Function<E, K>)");
+    Map<String, List<Map<String, String>>> grouped = groupBy(data, m -> m.get("Role"));
+
+    logger.info("Checking keys...");
+    assertNotNull(grouped.get("Leader"));
+    assertNotNull(grouped.get("Subordinate"));
+
+    logger.info("Checking values...");
+    assertEquals("Batman", grouped.get("Leader").get(0).get("Username"));
+    assertEquals("Superman", grouped.get("Leader").get(1).get("Username"));
+    assertEquals("Robin", grouped.get("Subordinate").get(0).get("Username"));
   }
 }
