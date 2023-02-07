@@ -16,4 +16,8 @@ public class RegexUtils {
   public static String match(String value, String pattern) {
     return match(value, pattern, 0);
   }
+
+  public static boolean matches(String value, Pattern pattern) {
+    return pattern.matcher(value).matches();
+  }
 }

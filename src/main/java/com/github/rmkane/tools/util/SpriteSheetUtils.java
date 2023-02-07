@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +31,7 @@ public class SpriteSheetUtils {
   }
 
   public static void processSpritesheets(String resourceDir, String outputDir) {
-    if (!FileUtils.mkdir(outputDir)) {
+    if (FileUtils.mkdir(outputDir)) {
       logger.debug("Creating output directory: {}", outputDir);
     }
     processSpritesheets(loadSpritesheets(resourceDir), outputDir);
@@ -55,7 +54,9 @@ public class SpriteSheetUtils {
 
   private static void processSpritesheet(SpriteSheet spritesheet, String outputDir) {
     String group = spritesheet.getName();
-    FileUtils.mkdir(Paths.get(outputDir, group).toString());
+    if (FileUtils.mkdir(outputDir, group)) {
+      logger.debug("Creating group directory: {}", group);
+    }
     spritesheet.getData().stream()
         .forEach(info -> processInfo(info, group, spritesheet, outputDir));
   }
@@ -63,7 +64,7 @@ public class SpriteSheetUtils {
   private static void processInfo(
       SpriteInfo info, String group, SpriteSheet spritesheet, String outputDir) {
     ImageUtils.writeImage(
-        Paths.get(outputDir, group, info.getFilename()).toString(),
+        FileUtils.pathAsString(outputDir, group, info.getFilename()),
         ImageUtils.extractSubImage(
             spritesheet.getImage(),
             info.getStartX(),
@@ -95,16 +96,12 @@ public class SpriteSheetUtils {
   }
 
   private static File findImageFile(List<File> files) {
-    return files.stream()
-        .filter(file -> imagePattern.matcher(file.getName()).matches())
-        .findFirst()
+    return CollectionUtils.find(files, file -> isValidFile(file, imagePattern))
         .orElseThrow(() -> new RuntimeException("Image not found"));
   }
 
   private static File findAtlasFile(List<File> files) {
-    return files.stream()
-        .filter(file -> atlasPattern.matcher(file.getName()).matches())
-        .findFirst()
+    return CollectionUtils.find(files, file -> isValidFile(file, atlasPattern))
         .orElseThrow(() -> new RuntimeException("Atlas not found"));
   }
 
@@ -115,5 +112,9 @@ public class SpriteSheetUtils {
 
   private static String extractGroupName(File file) {
     return RegexUtils.match(file.getName(), groupNamePattern);
+  }
+
+  private static boolean isValidFile(File file, Pattern pattern) {
+    return RegexUtils.matches(file.getName(), pattern);
   }
 }

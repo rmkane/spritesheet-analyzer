@@ -6,11 +6,12 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.AbstractMap.SimpleEntry;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class CollectionUtils {
   public static <E, K, V> Map<K, List<V>> groupBy(
@@ -20,15 +21,12 @@ public class CollectionUtils {
         .collect(groupingBy(Entry::getKey, mapping(Entry::getValue, toList())));
   }
 
-  public static <K, V> boolean isMapValid(Map<K, V> map, Function<V, Boolean> validatorFn) {
-    if (map == null) return false;
-    if (map.size() < 1) return false;
-    Iterator<Entry<K, V>> it = map.entrySet().iterator();
-    while (it.hasNext()) {
-      if (!validatorFn.apply(it.next().getValue())) {
-        return false;
-      }
-    }
-    return true;
+  public static <K, V> boolean isMapValid(Map<K, V> map, Predicate<V> predicate) {
+    if (map == null || map.isEmpty()) return false;
+    return map.entrySet().stream().map(Entry::getValue).allMatch(predicate);
+  }
+
+  public static <E> Optional<E> find(Collection<E> collection, Predicate<E> predicate) {
+    return collection.stream().filter(predicate).findFirst();
   }
 }
