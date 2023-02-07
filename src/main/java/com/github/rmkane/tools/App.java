@@ -1,6 +1,5 @@
 package com.github.rmkane.tools;
 
-import com.github.rmkane.tools.util.FileUtils;
 import com.github.rmkane.tools.util.SpriteSheetUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,8 +19,7 @@ public class App implements Runnable {
   @Override
   public void run() {
     logger.info("Starting spritesheet analyzer...");
-    FileUtils.mkdir(OUTPUT_DIR);
-    SpriteSheetUtils.processSpritesheets(SpriteSheetUtils.loadSpritesheets(RESOURCE_ROOT));
+    SpriteSheetUtils.processSpritesheets(RESOURCE_ROOT, OUTPUT_DIR);
     logger.info("Completed processing...");
   }
 }

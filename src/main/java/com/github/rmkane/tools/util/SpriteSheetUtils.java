@@ -7,13 +7,11 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.regex.Matcher;
+import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -22,8 +20,6 @@ import org.slf4j.LoggerFactory;
 
 public class SpriteSheetUtils {
   private static final Logger logger = LoggerFactory.getLogger(SpriteSheetUtils.class);
-
-  private static final String OUTPUT_DIR = "output";
 
   private static final Pattern groupNamePattern;
   private static final Pattern imagePattern;
@@ -35,33 +31,45 @@ public class SpriteSheetUtils {
     atlasPattern = Pattern.compile("^[a-z0-9]+_atlas\\.txt", Pattern.CASE_INSENSITIVE);
   }
 
-  public static List<SpriteSheet> loadSpritesheets(String resourcePath) {
+  public static void processSpritesheets(String resourceDir, String outputDir) {
+    if (!FileUtils.mkdir(outputDir)) {
+      logger.debug("Creating output directory: {}", outputDir);
+    }
+    processSpritesheets(loadSpritesheets(resourceDir), outputDir);
+  }
+
+  private static List<SpriteSheet> loadSpritesheets(String resourcePath) {
     Map<String, List<File>> groups =
         groupAssetsByCommonName(FileUtils.listFilesInDirectory(resourcePath));
-    if (!isMapValid(groups)) {
+    if (!CollectionUtils.isMapValid(groups, v -> v.size() == 2)) {
       logger.error("Invalid asset structure");
       throw new RuntimeException("Invalid asset structure");
     }
     return processGroups(groups);
   }
 
-  public static void processSpritesheets(List<SpriteSheet> spritesheets) {
-    spritesheets.stream().forEach(SpriteSheetUtils::processSpritesheet);
+  private static void processSpritesheets(List<SpriteSheet> spritesheets, String outputDir) {
+    spritesheets.stream()
+        .forEach(spritesheet -> SpriteSheetUtils.processSpritesheet(spritesheet, outputDir));
   }
 
-  private static void processSpritesheet(SpriteSheet spritesheet) {
-    String groupName = spritesheet.getName();
-    FileUtils.mkdir(Paths.get(OUTPUT_DIR, groupName).toString());
-    for (SpriteInfo info : spritesheet.getData()) {
-      ImageUtils.writeImage(
-          Paths.get(OUTPUT_DIR, groupName, info.getFilename()).toString(),
-          ImageUtils.extractSubImage(
-              spritesheet.getImage(),
-              info.getStartX(),
-              info.getStartY(),
-              info.getWidth(),
-              info.getHeight()));
-    }
+  private static void processSpritesheet(SpriteSheet spritesheet, String outputDir) {
+    String group = spritesheet.getName();
+    FileUtils.mkdir(Paths.get(outputDir, group).toString());
+    spritesheet.getData().stream()
+        .forEach(info -> processInfo(info, group, spritesheet, outputDir));
+  }
+
+  private static void processInfo(
+      SpriteInfo info, String group, SpriteSheet spritesheet, String outputDir) {
+    ImageUtils.writeImage(
+        Paths.get(outputDir, group, info.getFilename()).toString(),
+        ImageUtils.extractSubImage(
+            spritesheet.getImage(),
+            info.getStartX(),
+            info.getStartY(),
+            info.getWidth(),
+            info.getHeight()));
   }
 
   private static List<SpriteSheet> processGroups(Map<String, List<File>> groups) {
@@ -100,31 +108,12 @@ public class SpriteSheetUtils {
         .orElseThrow(() -> new RuntimeException("Atlas not found"));
   }
 
-  private static <K, V> boolean isMapValid(Map<K, List<V>> map) {
-    if (map == null) return false;
-    if (map.size() < 1) return false;
-    Iterator<Entry<K, List<V>>> it = map.entrySet().iterator();
-    while (it.hasNext()) {
-      if (it.next().getValue().size() < 2) {
-        return false;
-      }
-    }
-    return true;
-  }
-
   private static Map<String, List<File>> groupAssetsByCommonName(File[] assets) {
-    Map<String, List<File>> groups = new HashMap<>();
-    for (File file : assets) {
-      String groupName = extractGroupName(file.getName());
-      List<File> files = groups.getOrDefault(groupName, new ArrayList<File>());
-      files.add(file);
-      groups.put(groupName, files);
-    }
-    return groups;
+    return CollectionUtils.groupBy(
+        Arrays.asList(assets), SpriteSheetUtils::extractGroupName, Function.identity());
   }
 
-  private static String extractGroupName(String filename) {
-    Matcher matcher = groupNamePattern.matcher(filename);
-    return matcher.find() ? matcher.group() : null;
+  private static String extractGroupName(File file) {
+    return RegexUtils.match(file.getName(), groupNamePattern);
   }
 }
