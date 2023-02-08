@@ -1,25 +1,23 @@
 package com.github.rmkane.tools.domain.drawing;
 
-import java.awt.Dimension;
-import java.awt.geom.Point2D;
 import java.util.Objects;
 
 public class Grid {
-  private Point2D offset;
+  private Point offset;
   private Dimension size;
 
   public Grid() {}
 
-  public Grid(Point2D offset, Dimension size) {
+  public Grid(Point offset, Dimension size) {
     this.offset = offset;
     this.size = size;
   }
 
-  public Point2D getOffset() {
+  public Point getOffset() {
     return this.offset;
   }
 
-  public void setOffset(Point2D offset) {
+  public void setOffset(Point offset) {
     this.offset = offset;
   }
 
@@ -31,7 +29,7 @@ public class Grid {
     this.size = size;
   }
 
-  public Grid offset(Point2D offset) {
+  public Grid offset(Point offset) {
     setOffset(offset);
     return this;
   }

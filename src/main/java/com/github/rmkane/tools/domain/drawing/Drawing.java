@@ -3,22 +3,22 @@ package com.github.rmkane.tools.domain.drawing;
 import java.util.Objects;
 
 public class Drawing {
-  private MetaData metaData;
+  private MetaData metadata;
   private Data data;
 
   public Drawing() {}
 
-  public Drawing(MetaData metaData, Data data) {
-    this.metaData = metaData;
+  public Drawing(MetaData metadata, Data data) {
+    this.metadata = metadata;
     this.data = data;
   }
 
-  public MetaData getMetaData() {
-    return this.metaData;
+  public MetaData getMetadata() {
+    return this.metadata;
   }
 
-  public void setMetaData(MetaData metaData) {
-    this.metaData = metaData;
+  public void setMetadata(MetaData metadata) {
+    this.metadata = metadata;
   }
 
   public Data getData() {
@@ -29,8 +29,8 @@ public class Drawing {
     this.data = data;
   }
 
-  public Drawing metaData(MetaData metaData) {
-    setMetaData(metaData);
+  public Drawing metadata(MetaData metadata) {
+    setMetadata(metadata);
     return this;
   }
 
@@ -46,16 +46,16 @@ public class Drawing {
       return false;
     }
     Drawing drawing = (Drawing) o;
-    return Objects.equals(metaData, drawing.metaData) && Objects.equals(data, drawing.data);
+    return Objects.equals(metadata, drawing.metadata) && Objects.equals(data, drawing.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(metaData, data);
+    return Objects.hash(metadata, data);
   }
 
   @Override
   public String toString() {
-    return "{" + " metaData='" + getMetaData() + "'" + ", data='" + getData() + "'" + "}";
+    return "{" + " metadata='" + getMetadata() + "'" + ", data='" + getData() + "'" + "}";
   }
 }

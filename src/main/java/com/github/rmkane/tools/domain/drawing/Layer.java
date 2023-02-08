@@ -1,15 +1,14 @@
 package com.github.rmkane.tools.domain.drawing;
 
-import java.awt.geom.Point2D;
 import java.util.Objects;
 
 public class Layer {
   private String name;
-  private Point2D offset;
+  private Point offset;
 
   public Layer() {}
 
-  public Layer(String name, Point2D offset) {
+  public Layer(String name, Point offset) {
     this.name = name;
     this.offset = offset;
   }
@@ -22,11 +21,11 @@ public class Layer {
     this.name = name;
   }
 
-  public Point2D getOffset() {
+  public Point getOffset() {
     return this.offset;
   }
 
-  public void setOffset(Point2D offset) {
+  public void setOffset(Point offset) {
     this.offset = offset;
   }
 
@@ -35,7 +34,7 @@ public class Layer {
     return this;
   }
 
-  public Layer offset(Point2D offset) {
+  public Layer offset(Point offset) {
     setOffset(offset);
     return this;
   }
