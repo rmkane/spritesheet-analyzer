@@ -1,6 +1,5 @@
 package com.github.rmkane.tools.domain.sprite;
 
-import com.github.rmkane.tools.util.ImageUtils;
 import java.awt.image.BufferedImage;
 import java.util.Objects;
 
@@ -152,6 +151,6 @@ public class SpriteInfo {
   }
 
   public BufferedImage extractImage(BufferedImage source) {
-    return ImageUtils.extractSubImage(source, startX, startY, getWidth(), getHeight());
+    return source.getSubimage(startX, startY, getWidth(), getHeight());
   }
 }

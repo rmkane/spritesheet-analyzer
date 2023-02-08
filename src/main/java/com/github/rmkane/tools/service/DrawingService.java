@@ -42,6 +42,7 @@ public class DrawingService {
         root, 12, 9, cellWidth, cellHeight, oddColor, evenColor, offX, offY);
 
     // Draw nodes
+    int fontSize = (int) (cellHeight * 0.667);
     for (Node node : drawing.getData().getNodes()) {
       int row = node.getCell().getRow();
       int column = node.getCell().getColumn();
@@ -57,6 +58,10 @@ public class DrawingService {
       int offsetY = align(icon.getHeight(), cellHeight, node.getAlignment());
 
       ImageUtils.draw(icon, root, x + offsetX, y + offsetY);
+
+      int x1 = x + (cellWidth / 2);
+      int y1 = y + (cellHeight / 2);
+      ImageUtils.drawLabelFromCenter(root, node.getName(), x1, y1, Color.GREEN, fontSize);
     }
 
     ImageUtils.display(ImageUtils.scale(root, 0.5, 0.5));

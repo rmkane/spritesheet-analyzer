@@ -1,9 +1,10 @@
 package com.github.rmkane.tools.util;
 
-import java.awt.AlphaComposite;
 import java.awt.Color;
-import java.awt.Composite;
+import java.awt.Font;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.font.TextLayout;
 import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
@@ -49,9 +50,28 @@ public class ImageUtils {
       Color evenColor,
       int offsetX,
       int offsetY) {
-    Composite comp = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.33f);
-    Graphics2D graphics = (Graphics2D) source.getGraphics();
-    // graphics.setComposite(comp);
+    drawCheckerBoard(
+        (Graphics2D) source.getGraphics(),
+        rows,
+        columns,
+        cellWidth,
+        cellHeight,
+        oddColor,
+        evenColor,
+        offsetX,
+        offsetY);
+  }
+
+  public static void drawCheckerBoard(
+      Graphics2D graphics,
+      int rows,
+      int columns,
+      int cellWidth,
+      int cellHeight,
+      Color oddColor,
+      Color evenColor,
+      int offsetX,
+      int offsetY) {
     for (int row = 0; row < rows; row++) {
       for (int column = 0; column < columns; column++) {
         int x = offsetX + (cellWidth * column);
@@ -63,9 +83,24 @@ public class ImageUtils {
     }
   }
 
-  public static BufferedImage extractSubImage(
-      BufferedImage source, int x, int y, int width, int height) {
-    return source.getSubimage(x, y, width, height);
+  public static void drawLabelFromCenter(
+      BufferedImage source, String label, int x, int y, Color color, int fontSize) {
+    drawLabelFromCenter((Graphics2D) source.getGraphics(), label, x, y, color, fontSize);
+  }
+
+  public static void drawLabelFromCenter(
+      Graphics2D graphics, String label, int x, int y, Color color, int fontSize) {
+    graphics.setColor(color);
+    graphics.setFont(new Font("monospace", Font.PLAIN, fontSize)); // monospace not necessary
+    graphics.setRenderingHint(
+        RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+
+    TextLayout textLayout =
+        new TextLayout(label, graphics.getFont(), graphics.getFontRenderContext());
+    double textHeight = textLayout.getBounds().getHeight();
+    double textWidth = textLayout.getBounds().getWidth();
+
+    graphics.drawString(label, x - (int) textWidth / 2, y + (int) textHeight / 2);
   }
 
   public static BufferedImage loadImage(File imageFile) {
