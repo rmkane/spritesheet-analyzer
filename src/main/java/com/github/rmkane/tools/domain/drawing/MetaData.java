@@ -5,12 +5,14 @@ import java.util.Objects;
 public class MetaData {
   private String sheet;
   private Grid grid;
+  private Dimension size;
 
   public MetaData() {}
 
-  public MetaData(String sheet, Grid grid) {
+  public MetaData(String sheet, Grid grid, Dimension size) {
     this.sheet = sheet;
     this.grid = grid;
+    this.size = size;
   }
 
   public String getSheet() {
@@ -29,6 +31,14 @@ public class MetaData {
     this.grid = grid;
   }
 
+  public Dimension getSize() {
+    return this.size;
+  }
+
+  public void setSize(Dimension size) {
+    this.size = size;
+  }
+
   public MetaData sheet(String sheet) {
     setSheet(sheet);
     return this;
@@ -39,6 +49,11 @@ public class MetaData {
     return this;
   }
 
+  public MetaData size(Dimension size) {
+    setSize(size);
+    return this;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (o == this) return true;
@@ -46,16 +61,28 @@ public class MetaData {
       return false;
     }
     MetaData metaData = (MetaData) o;
-    return Objects.equals(sheet, metaData.sheet) && Objects.equals(grid, metaData.grid);
+    return Objects.equals(sheet, metaData.sheet)
+        && Objects.equals(grid, metaData.grid)
+        && Objects.equals(size, metaData.size);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sheet, grid);
+    return Objects.hash(sheet, grid, size);
   }
 
   @Override
   public String toString() {
-    return "{" + " sheet='" + getSheet() + "'" + ", grid='" + getGrid() + "'" + "}";
+    return "{"
+        + " sheet='"
+        + getSheet()
+        + "'"
+        + ", grid='"
+        + getGrid()
+        + "'"
+        + ", size='"
+        + getSize()
+        + "'"
+        + "}";
   }
 }

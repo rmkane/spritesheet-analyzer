@@ -89,7 +89,9 @@ public class SpriteSheet {
   }
 
   public BufferedImage extractImage(String name) {
-    return data.get(name).extractImage(image);
+    SpriteInfo info = data.get(name);
+    if (info == null) return null;
+    return info.extractImage(image);
   }
 
   public static SpriteSheet create(String name, BufferedImage image, Map<String, SpriteInfo> data) {

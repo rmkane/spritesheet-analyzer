@@ -14,6 +14,7 @@ public class App implements Runnable {
 
   private static final String RESOURCE_ROOT = "spritesheets";
   private static final String OUTPUT_DIR = "output";
+  private static final String DRAWING_JSON = "data/drawing.json";
 
   public static void main(String[] args) {
     App app = new App();
@@ -27,12 +28,11 @@ public class App implements Runnable {
 
     Map<String, SpriteSheet> spritesheets = SpriteSheetService.loadSpritesheets(RESOURCE_ROOT);
 
-    SpriteSheetService.processSpritesheets(spritesheets, OUTPUT_DIR);
+    // SpriteSheetService.processSpritesheets(spritesheets, OUTPUT_DIR);
 
-    DrawingService.render(spritesheets, OUTPUT_DIR);
+    Drawing drawing = JsonUtils.loadJson(DRAWING_JSON, Drawing.class);
 
-    Drawing drawing = JsonUtils.loadJson("data/drawing.json", Drawing.class);
-    logger.warn(JsonUtils.toJson(drawing, true));
+    DrawingService.render(spritesheets, drawing, OUTPUT_DIR);
 
     logger.info("Completed processing...");
   }

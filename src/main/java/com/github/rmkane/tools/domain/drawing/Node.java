@@ -6,16 +6,16 @@ public class Node {
 
   private String name;
   private Cell cell;
-  private String origin;
+  private String alignment;
   private String embelishment;
   private States states;
 
   public Node() {}
 
-  public Node(String name, Cell cell, String origin, String embelishment, States states) {
+  public Node(String name, Cell cell, String alignment, String embelishment, States states) {
     this.name = name;
     this.cell = cell;
-    this.origin = origin;
+    this.alignment = alignment;
     this.embelishment = embelishment;
     this.states = states;
   }
@@ -36,12 +36,12 @@ public class Node {
     this.cell = cell;
   }
 
-  public String getOrigin() {
-    return this.origin;
+  public String getAlignment() {
+    return this.alignment;
   }
 
-  public void setOrigin(String origin) {
-    this.origin = origin;
+  public void setAlignment(String alignment) {
+    this.alignment = alignment;
   }
 
   public String getEmbelishment() {
@@ -70,8 +70,8 @@ public class Node {
     return this;
   }
 
-  public Node origin(String origin) {
-    setOrigin(origin);
+  public Node alignment(String alignment) {
+    setAlignment(alignment);
     return this;
   }
 
@@ -94,14 +94,14 @@ public class Node {
     Node node = (Node) o;
     return Objects.equals(name, node.name)
         && Objects.equals(cell, node.cell)
-        && Objects.equals(origin, node.origin)
+        && Objects.equals(alignment, node.alignment)
         && Objects.equals(embelishment, node.embelishment)
         && Objects.equals(states, node.states);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, cell, origin, embelishment, states);
+    return Objects.hash(name, cell, alignment, embelishment, states);
   }
 
   @Override
@@ -113,8 +113,8 @@ public class Node {
         + ", cell='"
         + getCell()
         + "'"
-        + ", origin='"
-        + getOrigin()
+        + ", alignment='"
+        + getAlignment()
         + "'"
         + ", embelishment='"
         + getEmbelishment()
