@@ -20,8 +20,11 @@ public class FileUtils {
   }
 
   public static boolean mkdir(String pathname) {
-    File directory = new File(pathname);
-    return !directory.exists() ? directory.mkdirs() : false;
+    return mkdir(new File(pathname));
+  }
+
+  public static boolean mkdir(File directory) {
+    return !directory.exists() && directory.mkdirs();
   }
 
   public static File[] listFilesInDirectory(String resourcePath) {

@@ -19,13 +19,12 @@ public class ImageUtils {
     return null;
   }
 
-  public static boolean writeImage(String filename, BufferedImage image) {
+  public static void writeImage(String filename, BufferedImage image) {
     try {
-      return ImageIO.write(image, "png", new File(filename));
+      ImageIO.write(image, "png", new File(filename));
     } catch (IOException e) {
       logger.error("Failed to write image", e);
     }
-    return false;
   }
 
   public static BufferedImage extractSubImage(

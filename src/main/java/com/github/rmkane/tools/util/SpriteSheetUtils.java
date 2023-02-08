@@ -20,9 +20,7 @@ import org.slf4j.LoggerFactory;
 public class SpriteSheetUtils {
   private static final Logger logger = LoggerFactory.getLogger(SpriteSheetUtils.class);
 
-  private static final Pattern groupNamePattern;
-  private static final Pattern imagePattern;
-  private static final Pattern atlasPattern;
+  private static final Pattern atlasPattern, groupNamePattern, imagePattern;
 
   static {
     groupNamePattern = Pattern.compile("^[a-z0-9]+", Pattern.CASE_INSENSITIVE);
@@ -40,7 +38,7 @@ public class SpriteSheetUtils {
   private static List<SpriteSheet> loadSpritesheets(String resourcePath) {
     Map<String, List<File>> groups =
         groupAssetsByCommonName(FileUtils.listFilesInDirectory(resourcePath));
-    if (!CollectionUtils.isMapValid(groups, v -> v.size() == 2)) {
+    if (!CollectionUtils.isMapValid(groups, v -> v.size() > 1)) {
       logger.error("Invalid asset structure");
       throw new RuntimeException("Invalid asset structure");
     }
@@ -48,8 +46,7 @@ public class SpriteSheetUtils {
   }
 
   private static void processSpritesheets(List<SpriteSheet> spritesheets, String outputDir) {
-    spritesheets.stream()
-        .forEach(spritesheet -> SpriteSheetUtils.processSpritesheet(spritesheet, outputDir));
+    spritesheets.forEach(sheet -> SpriteSheetUtils.processSpritesheet(sheet, outputDir));
   }
 
   private static void processSpritesheet(SpriteSheet spritesheet, String outputDir) {
@@ -57,20 +54,14 @@ public class SpriteSheetUtils {
     if (FileUtils.mkdir(outputDir, group)) {
       logger.debug("Creating group directory: {}", group);
     }
-    spritesheet.getData().stream()
-        .forEach(info -> processInfo(info, group, spritesheet, outputDir));
+    spritesheet.getData().forEach(info -> processInfo(info, group, spritesheet, outputDir));
   }
 
   private static void processInfo(
       SpriteInfo info, String group, SpriteSheet spritesheet, String outputDir) {
     ImageUtils.writeImage(
         FileUtils.pathAsString(outputDir, group, info.getFilename()),
-        ImageUtils.extractSubImage(
-            spritesheet.getImage(),
-            info.getStartX(),
-            info.getStartY(),
-            info.getWidth(),
-            info.getHeight()));
+        info.extractImage(spritesheet.getImage()));
   }
 
   private static List<SpriteSheet> processGroups(Map<String, List<File>> groups) {

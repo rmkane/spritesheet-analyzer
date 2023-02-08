@@ -1,5 +1,8 @@
 package com.github.rmkane.tools.domain;
 
+import com.github.rmkane.tools.util.ImageUtils;
+import java.awt.image.BufferedImage;
+
 public class SpriteInfo {
   private String name;
   private int startX;
@@ -50,6 +53,10 @@ public class SpriteInfo {
     instance.endY = Integer.parseInt(tokens[8]);
 
     return instance;
+  }
+
+  public BufferedImage extractImage(BufferedImage source) {
+    return ImageUtils.extractSubImage(source, startX, startY, getWidth(), getHeight());
   }
 
   @Override

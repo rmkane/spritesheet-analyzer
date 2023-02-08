@@ -34,7 +34,7 @@ public class CollectionUtils {
 
   public static <K, V> boolean isMapValid(Map<K, V> map, Predicate<V> predicate) {
     if (map == null || map.isEmpty()) return false;
-    return map.entrySet().stream().map(Entry::getValue).allMatch(predicate);
+    return map.values().stream().allMatch(predicate);
   }
 
   public static <K, V> Map<K, V> immutableMapOf(K k, V v) {
