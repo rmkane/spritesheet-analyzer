@@ -1,6 +1,9 @@
 package com.github.rmkane.tools;
 
-import com.github.rmkane.tools.util.SpriteSheetUtils;
+import com.github.rmkane.tools.domain.sprite.SpriteSheet;
+import com.github.rmkane.tools.service.DrawingService;
+import com.github.rmkane.tools.service.SpriteSheetService;
+import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +22,13 @@ public class App implements Runnable {
   @Override
   public void run() {
     logger.info("Starting spritesheet analyzer...");
-    SpriteSheetUtils.processSpritesheets(RESOURCE_ROOT, OUTPUT_DIR);
+
+    Map<String, SpriteSheet> spritesheets = SpriteSheetService.loadSpritesheets(RESOURCE_ROOT);
+
+    // SpriteSheetService.processSpritesheets(spritesheets, OUTPUT_DIR);
+
+    DrawingService.render(spritesheets, OUTPUT_DIR);
+
     logger.info("Completed processing...");
   }
 }

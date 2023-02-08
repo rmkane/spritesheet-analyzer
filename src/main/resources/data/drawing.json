@@ -1,0 +1,481 @@
+{
+    "metadata": {
+        "sheet": "2DUIDarkAlchemy",
+        "grid": {
+            "offset": {
+                "x": 47,
+                "y": 49
+            },
+            "size": {
+                "width": 64,
+                "height": 64
+            }
+        }
+    },
+    "data": {
+        "layers": [
+            {
+                "name": "DarkAlchemyBase",
+                "offset": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            {
+                "name": "DarkAlchemy_Recipes_Background",
+                "offset": {
+                    "x": 50,
+                    "y": 180
+                }
+            }
+        ],
+        "nodes": [
+            {
+                "name": "A",
+                "cell": {
+                    "row": 3,
+                    "column": 7
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_01_Disabled",
+                    "enabled": "DarkAlchemy_Node_01_Enabled",
+                    "mouseover": "DarkAlchemy_Node_01_Mouseover",
+                    "pushed": "DarkAlchemy_Node_01_Pushed"
+                }
+            },
+            {
+                "name": "B",
+                "cell": {
+                    "row": 5,
+                    "column": 5
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_02_Disabled",
+                    "enabled": "DarkAlchemy_Node_02_Enabled",
+                    "mouseover": "DarkAlchemy_Node_02_Mouseover",
+                    "pushed": "DarkAlchemy_Node_02_Pushed"
+                }
+            },
+            {
+                "name": "C",
+                "cell": {
+                    "row": 5,
+                    "column": 9
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_03_Disabled",
+                    "enabled": "DarkAlchemy_Node_03_Enabled",
+                    "mouseover": "DarkAlchemy_Node_03_Mouseover",
+                    "pushed": "DarkAlchemy_Node_03_Pushed"
+                }
+            },
+            {
+                "name": "D",
+                "cell": {
+                    "row": 6,
+                    "column": 4
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_04_Disabled",
+                    "enabled": "DarkAlchemy_Node_04_Enabled",
+                    "mouseover": "DarkAlchemy_Node_04_Mouseover",
+                    "pushed": "DarkAlchemy_Node_04_Pushed"
+                }
+            },
+            {
+                "name": "E",
+                "cell": {
+                    "row": 6,
+                    "column": 6
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_05_Disabled",
+                    "enabled": "DarkAlchemy_Node_05_Enabled",
+                    "mouseover": "DarkAlchemy_Node_05_Mouseover",
+                    "pushed": "DarkAlchemy_Node_05_Pushed"
+                }
+            },
+            {
+                "name": "F",
+                "cell": {
+                    "row": 6,
+                    "column": 8
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_06_Disabled",
+                    "enabled": "DarkAlchemy_Node_06_Enabled",
+                    "mouseover": "DarkAlchemy_Node_06_Mouseover",
+                    "pushed": "DarkAlchemy_Node_06_Pushed"
+                }
+            },
+            {
+                "name": "G",
+                "cell": {
+                    "row": 6,
+                    "column": 10
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_07_Disabled",
+                    "enabled": "DarkAlchemy_Node_07_Enabled",
+                    "mouseover": "DarkAlchemy_Node_07_Mouseover",
+                    "pushed": "DarkAlchemy_Node_07_Pushed"
+                }
+            },
+            {
+                "name": "H",
+                "cell": {
+                    "row": 7,
+                    "column": 7
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_08",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_08_Disabled",
+                    "enabled": "DarkAlchemy_Node_08_Enabled",
+                    "mouseover": "DarkAlchemy_Node_08_Mouseover",
+                    "pushed": "DarkAlchemy_Node_08_Pushed"
+                }
+            },
+            {
+                "name": "I",
+                "cell": {
+                    "row": 8,
+                    "column": 4
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_09_Disabled",
+                    "enabled": "DarkAlchemy_Node_09_Enabled",
+                    "mouseover": "DarkAlchemy_Node_09_Mouseover",
+                    "pushed": "DarkAlchemy_Node_09_Pushed"
+                }
+            },
+            {
+                "name": "J",
+                "cell": {
+                    "row": 8,
+                    "column": 7
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_16",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_10_Disabled",
+                    "enabled": "DarkAlchemy_Node_10_Enabled",
+                    "mouseover": "DarkAlchemy_Node_10_Mouseover",
+                    "pushed": "DarkAlchemy_Node_10_Pushed"
+                }
+            },
+            {
+                "name": "K",
+                "cell": {
+                    "row": 8,
+                    "column": 10
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_11_Disabled",
+                    "enabled": "DarkAlchemy_Node_11_Enabled",
+                    "mouseover": "DarkAlchemy_Node_11_Mouseover",
+                    "pushed": "DarkAlchemy_Node_11_Pushed"
+                }
+            },
+            {
+                "name": "L",
+                "cell": {
+                    "row": 9,
+                    "column": 3
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_12_Disabled",
+                    "enabled": "DarkAlchemy_Node_12_Enabled",
+                    "mouseover": "DarkAlchemy_Node_12_Mouseover",
+                    "pushed": "DarkAlchemy_Node_12_Pushed"
+                }
+            },
+            {
+                "name": "M",
+                "cell": {
+                    "row": 9,
+                    "column": 5
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_13_Disabled",
+                    "enabled": "DarkAlchemy_Node_13_Enabled",
+                    "mouseover": "DarkAlchemy_Node_13_Mouseover",
+                    "pushed": "DarkAlchemy_Node_13_Pushed"
+                }
+            },
+            {
+                "name": "N",
+                "cell": {
+                    "row": 9,
+                    "column": 6
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_14_Disabled",
+                    "enabled": "DarkAlchemy_Node_14_Enabled",
+                    "mouseover": "DarkAlchemy_Node_14_Mouseover",
+                    "pushed": "DarkAlchemy_Node_14_Pushed"
+                }
+            },
+            {
+                "name": "O",
+                "cell": {
+                    "row": 9,
+                    "column": 8
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_15_Disabled",
+                    "enabled": "DarkAlchemy_Node_15_Enabled",
+                    "mouseover": "DarkAlchemy_Node_15_Mouseover",
+                    "pushed": "DarkAlchemy_Node_15_Pushed"
+                }
+            },
+            {
+                "name": "P",
+                "cell": {
+                    "row": 9,
+                    "column": 9
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_16_Disabled",
+                    "enabled": "DarkAlchemy_Node_16_Enabled",
+                    "mouseover": "DarkAlchemy_Node_16_Mouseover",
+                    "pushed": "DarkAlchemy_Node_16_Pushed"
+                }
+            },
+            {
+                "name": "Q",
+                "cell": {
+                    "row": 9,
+                    "column": 11
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_17_Disabled",
+                    "enabled": "DarkAlchemy_Node_17_Enabled",
+                    "mouseover": "DarkAlchemy_Node_17_Mouseover",
+                    "pushed": "DarkAlchemy_Node_17_Pushed"
+                }
+            },
+            {
+                "name": "R",
+                "cell": {
+                    "row": 10,
+                    "column": 4
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_18_Disabled",
+                    "enabled": "DarkAlchemy_Node_18_Enabled",
+                    "mouseover": "DarkAlchemy_Node_18_Mouseover",
+                    "pushed": "DarkAlchemy_Node_18_Pushed"
+                }
+            },
+            {
+                "name": "S",
+                "cell": {
+                    "row": 10,
+                    "column": 7
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_19_Disabled",
+                    "enabled": "DarkAlchemy_Node_19_Enabled",
+                    "mouseover": "DarkAlchemy_Node_19_Mouseover",
+                    "pushed": "DarkAlchemy_Node_19_Pushed"
+                }
+            },
+            {
+                "name": "T",
+                "cell": {
+                    "row": 10,
+                    "column": 10
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_20_Disabled",
+                    "enabled": "DarkAlchemy_Node_20_Enabled",
+                    "mouseover": "DarkAlchemy_Node_20_Mouseover",
+                    "pushed": "DarkAlchemy_Node_20_Pushed"
+                }
+            },
+            {
+                "name": "U",
+                "cell": {
+                    "row": 11,
+                    "column": 3
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_21_Disabled",
+                    "enabled": "DarkAlchemy_Node_21_Enabled",
+                    "mouseover": "DarkAlchemy_Node_21_Mouseover",
+                    "pushed": "DarkAlchemy_Node_21_Pushed"
+                }
+            },
+            {
+                "name": "V",
+                "cell": {
+                    "row": 11,
+                    "column": 5
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_22_Disabled",
+                    "enabled": "DarkAlchemy_Node_22_Enabled",
+                    "mouseover": "DarkAlchemy_Node_22_Mouseover",
+                    "pushed": "DarkAlchemy_Node_22_Pushed"
+                }
+            },
+            {
+                "name": "W",
+                "cell": {
+                    "row": 11,
+                    "column": 6
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_23_Disabled",
+                    "enabled": "DarkAlchemy_Node_23_Enabled",
+                    "mouseover": "DarkAlchemy_Node_23_Mouseover",
+                    "pushed": "DarkAlchemy_Node_23_Pushed"
+                }
+            },
+            {
+                "name": "X",
+                "cell": {
+                    "row": 11,
+                    "column": 8
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_24_Disabled",
+                    "enabled": "DarkAlchemy_Node_24_Enabled",
+                    "mouseover": "DarkAlchemy_Node_24_Mouseover",
+                    "pushed": "DarkAlchemy_Node_24_Pushed"
+                }
+            },
+            {
+                "name": "Y",
+                "cell": {
+                    "row": 11,
+                    "column": 9
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_25_Disabled",
+                    "enabled": "DarkAlchemy_Node_25_Enabled",
+                    "mouseover": "DarkAlchemy_Node_25_Mouseover",
+                    "pushed": "DarkAlchemy_Node_25_Pushed"
+                }
+            },
+            {
+                "name": "Z",
+                "cell": {
+                    "row": 11,
+                    "column": 11
+                },
+                "origin": "bottom",
+                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_26_Disabled",
+                    "enabled": "DarkAlchemy_Node_26_Enabled",
+                    "mouseover": "DarkAlchemy_Node_26_Mouseover",
+                    "pushed": "DarkAlchemy_Node_26_Pushed"
+                }
+            },
+            {
+                "name": "AA",
+                "cell": {
+                    "row": 12,
+                    "column": 4
+                },
+                "origin": "bottom",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_27_Disabled",
+                    "enabled": "DarkAlchemy_Node_27_Enabled",
+                    "mouseover": "DarkAlchemy_Node_27_Mouseover",
+                    "pushed": "DarkAlchemy_Node_27_Pushed"
+                }
+            },
+            {
+                "name": "AB",
+                "cell": {
+                    "row": 12,
+                    "column": 7
+                },
+                "origin": "bottom",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_28_Disabled",
+                    "enabled": "DarkAlchemy_Node_28_Enabled",
+                    "mouseover": "DarkAlchemy_Node_28_Mouseover",
+                    "pushed": "DarkAlchemy_Node_28_Pushed"
+                }
+            },
+            {
+                "name": "AC",
+                "cell": {
+                    "row": 12,
+                    "column": 10
+                },
+                "origin": "bottom",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_29_Disabled",
+                    "enabled": "DarkAlchemy_Node_29_Enabled",
+                    "mouseover": "DarkAlchemy_Node_29_Mouseover",
+                    "pushed": "DarkAlchemy_Node_29_Pushed"
+                }
+            },
+            {
+                "name": "AD",
+                "cell": {
+                    "row": 13,
+                    "column": 7
+                },
+                "origin": "top",
+                "states": {
+                    "disabled": "DarkAlchemy_Node_30_Disabled",
+                    "enabled": "DarkAlchemy_Node_30_Enabled",
+                    "mouseover": "DarkAlchemy_Node_30_Mouseover",
+                    "pushed": "DarkAlchemy_Node_30_Pushed"
+                }
+            }
+        ]
+    }
+}

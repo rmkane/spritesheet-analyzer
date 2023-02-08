@@ -24,15 +24,23 @@ public class FileUtils {
   }
 
   public static boolean mkdir(File directory) {
-    return !directory.exists() && directory.mkdirs();
+    return !exists(directory) && directory.mkdirs();
   }
 
-  public static File[] listFilesInDirectory(String resourcePath) {
-    return listFilesInDirectory(getFileFromURL(resourcePath));
+  public static boolean exists(String resourcePath) {
+    return exists(getFileFromURL(resourcePath));
+  }
+
+  public static boolean exists(File file) {
+    return file != null && file.exists();
   }
 
   public static File getFileFromURL(String resourcePath) {
     return getFileFromURL(loader.getResource(resourcePath));
+  }
+
+  public static File[] listFilesInDirectory(String resourcePath) {
+    return listFilesInDirectory(getFileFromURL(resourcePath));
   }
 
   private static File[] listFilesInDirectory(File directory) {

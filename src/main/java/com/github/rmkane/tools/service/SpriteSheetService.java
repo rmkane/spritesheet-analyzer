@@ -1,7 +1,11 @@
-package com.github.rmkane.tools.util;
+package com.github.rmkane.tools.service;
 
-import com.github.rmkane.tools.domain.SpriteInfo;
-import com.github.rmkane.tools.domain.SpriteSheet;
+import com.github.rmkane.tools.domain.sprite.SpriteInfo;
+import com.github.rmkane.tools.domain.sprite.SpriteSheet;
+import com.github.rmkane.tools.util.CollectionUtils;
+import com.github.rmkane.tools.util.FileUtils;
+import com.github.rmkane.tools.util.ImageUtils;
+import com.github.rmkane.tools.util.RegexUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -17,8 +21,8 @@ import java.util.stream.Stream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SpriteSheetUtils {
-  private static final Logger logger = LoggerFactory.getLogger(SpriteSheetUtils.class);
+public class SpriteSheetService {
+  private static final Logger logger = LoggerFactory.getLogger(SpriteSheetService.class);
 
   private static final Pattern atlasPattern, groupNamePattern, imagePattern;
 
@@ -28,14 +32,7 @@ public class SpriteSheetUtils {
     atlasPattern = Pattern.compile("^[a-z0-9]+_atlas\\.txt", Pattern.CASE_INSENSITIVE);
   }
 
-  public static void processSpritesheets(String resourceDir, String outputDir) {
-    if (FileUtils.mkdir(outputDir)) {
-      logger.debug("Creating output directory: {}", outputDir);
-    }
-    processSpritesheets(loadSpritesheets(resourceDir), outputDir);
-  }
-
-  private static List<SpriteSheet> loadSpritesheets(String resourcePath) {
+  public static Map<String, SpriteSheet> loadSpritesheets(String resourcePath) {
     Map<String, List<File>> groups =
         groupAssetsByCommonName(FileUtils.listFilesInDirectory(resourcePath));
     if (!CollectionUtils.isMapValid(groups, v -> v.size() > 1)) {
@@ -45,8 +42,11 @@ public class SpriteSheetUtils {
     return processGroups(groups);
   }
 
-  private static void processSpritesheets(List<SpriteSheet> spritesheets, String outputDir) {
-    spritesheets.forEach(sheet -> SpriteSheetUtils.processSpritesheet(sheet, outputDir));
+  public static void processSpritesheets(Map<String, SpriteSheet> spritesheets, String outputDir) {
+    if (FileUtils.mkdir(outputDir)) {
+      logger.debug("Creating output directory: {}", outputDir);
+    }
+    spritesheets.values().forEach(sheet -> SpriteSheetService.processSpritesheet(sheet, outputDir));
   }
 
   private static void processSpritesheet(SpriteSheet spritesheet, String outputDir) {
@@ -54,7 +54,10 @@ public class SpriteSheetUtils {
     if (FileUtils.mkdir(outputDir, group)) {
       logger.debug("Creating group directory: {}", group);
     }
-    spritesheet.getData().forEach(info -> processInfo(info, group, spritesheet, outputDir));
+    spritesheet
+        .getData()
+        .values()
+        .forEach(info -> processInfo(info, group, spritesheet, outputDir));
   }
 
   private static void processInfo(
@@ -64,22 +67,24 @@ public class SpriteSheetUtils {
         info.extractImage(spritesheet.getImage()));
   }
 
-  private static List<SpriteSheet> processGroups(Map<String, List<File>> groups) {
+  private static Map<String, SpriteSheet> processGroups(Map<String, List<File>> groups) {
     return groups.entrySet().stream()
-        .map(SpriteSheetUtils::processEntry)
-        .collect(Collectors.toList());
+        .collect(Collectors.toMap(entry -> entry.getKey(), SpriteSheetService::processEntry));
   }
 
   private static SpriteSheet processEntry(Entry<String, List<File>> entry) {
-    return new SpriteSheet(
+    return SpriteSheet.create(
         entry.getKey(),
         ImageUtils.loadImage(findImageFile(entry.getValue())),
         loadAtlas(findAtlasFile(entry.getValue())));
   }
 
-  private static List<SpriteInfo> loadAtlas(File atlasFile) {
+  private static Map<String, SpriteInfo> loadAtlas(File atlasFile) {
     try (Stream<String> stream = Files.lines(atlasFile.toPath(), StandardCharsets.UTF_8)) {
-      return stream.skip(1).map(SpriteInfo::parseLine).collect(Collectors.toList());
+      return stream
+          .skip(1)
+          .map(SpriteInfo::parseLine)
+          .collect(Collectors.toMap(SpriteInfo::getName, Function.identity()));
     } catch (IOException e) {
       logger.error("Issue processing atlas file", e);
     }
@@ -98,7 +103,7 @@ public class SpriteSheetUtils {
 
   private static Map<String, List<File>> groupAssetsByCommonName(File[] assets) {
     return CollectionUtils.groupBy(
-        Arrays.asList(assets), SpriteSheetUtils::extractGroupName, Function.identity());
+        Arrays.asList(assets), SpriteSheetService::extractGroupName, Function.identity());
   }
 
   private static String extractGroupName(File file) {
