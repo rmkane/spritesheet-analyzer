@@ -36,6 +36,7 @@
         "nodes": [
             {
                 "name": "A",
+                "parents": [],
                 "cell": {
                     "row": 3,
                     "column": 7
@@ -51,6 +52,7 @@
             },
             {
                 "name": "B",
+                "parents": ["A"],
                 "cell": {
                     "row": 5,
                     "column": 5
@@ -66,6 +68,7 @@
             },
             {
                 "name": "C",
+                "parents": ["A"],
                 "cell": {
                     "row": 5,
                     "column": 9
@@ -81,6 +84,7 @@
             },
             {
                 "name": "D",
+                "parents": ["B"],
                 "cell": {
                     "row": 6,
                     "column": 4
@@ -96,6 +100,7 @@
             },
             {
                 "name": "E",
+                "parents": ["B"],
                 "cell": {
                     "row": 6,
                     "column": 6
@@ -111,6 +116,7 @@
             },
             {
                 "name": "F",
+                "parents": ["C"],
                 "cell": {
                     "row": 6,
                     "column": 8
@@ -126,6 +132,7 @@
             },
             {
                 "name": "G",
+                "parents": ["C"],
                 "cell": {
                     "row": 6,
                     "column": 10
@@ -141,6 +148,7 @@
             },
             {
                 "name": "H",
+                "parents": ["D", "E", "F", "G"],
                 "cell": {
                     "row": 7,
                     "column": 7
@@ -156,6 +164,7 @@
             },
             {
                 "name": "I",
+                "parents": ["H"],
                 "cell": {
                     "row": 8,
                     "column": 4
@@ -171,6 +180,7 @@
             },
             {
                 "name": "J",
+                "parents": ["H"],
                 "cell": {
                     "row": 8,
                     "column": 7
@@ -186,6 +196,7 @@
             },
             {
                 "name": "K",
+                "parents": ["H"],
                 "cell": {
                     "row": 8,
                     "column": 10
@@ -201,6 +212,7 @@
             },
             {
                 "name": "L",
+                "parents": ["I"],
                 "cell": {
                     "row": 9,
                     "column": 3
@@ -216,6 +228,7 @@
             },
             {
                 "name": "M",
+                "parents": ["I"],
                 "cell": {
                     "row": 9,
                     "column": 5
@@ -231,6 +244,7 @@
             },
             {
                 "name": "N",
+                "parents": ["J"],
                 "cell": {
                     "row": 9,
                     "column": 6
@@ -246,6 +260,7 @@
             },
             {
                 "name": "O",
+                "parents": ["J"],
                 "cell": {
                     "row": 9,
                     "column": 8
@@ -261,6 +276,7 @@
             },
             {
                 "name": "P",
+                "parents": ["K"],
                 "cell": {
                     "row": 9,
                     "column": 9
@@ -276,6 +292,7 @@
             },
             {
                 "name": "Q",
+                "parents": ["K"],
                 "cell": {
                     "row": 9,
                     "column": 11
@@ -291,6 +308,7 @@
             },
             {
                 "name": "R",
+                "parents": ["L", "M", "S"],
                 "cell": {
                     "row": 10,
                     "column": 4
@@ -306,6 +324,7 @@
             },
             {
                 "name": "S",
+                "parents": ["N", "O", "R", "T"],
                 "cell": {
                     "row": 10,
                     "column": 7
@@ -321,6 +340,7 @@
             },
             {
                 "name": "T",
+                "parents": ["P", "Q", "S"],
                 "cell": {
                     "row": 10,
                     "column": 10
@@ -336,6 +356,7 @@
             },
             {
                 "name": "U",
+                "parents": ["R"],
                 "cell": {
                     "row": 11,
                     "column": 3
@@ -351,6 +372,7 @@
             },
             {
                 "name": "V",
+                "parents": ["R"],
                 "cell": {
                     "row": 11,
                     "column": 5
@@ -366,6 +388,7 @@
             },
             {
                 "name": "W",
+                "parents": ["S"],
                 "cell": {
                     "row": 11,
                     "column": 6
@@ -381,6 +404,7 @@
             },
             {
                 "name": "X",
+                "parents": ["S"],
                 "cell": {
                     "row": 11,
                     "column": 8
@@ -396,6 +420,7 @@
             },
             {
                 "name": "Y",
+                "parents": ["T"],
                 "cell": {
                     "row": 11,
                     "column": 9
@@ -411,6 +436,7 @@
             },
             {
                 "name": "Z",
+                "parents": ["T"],
                 "cell": {
                     "row": 11,
                     "column": 11
@@ -426,6 +452,7 @@
             },
             {
                 "name": "AA",
+                "parents": ["U", "V"],
                 "cell": {
                     "row": 12,
                     "column": 4
@@ -440,6 +467,7 @@
             },
             {
                 "name": "AB",
+                "parents": ["W", "X"],
                 "cell": {
                     "row": 12,
                     "column": 7
@@ -454,6 +482,7 @@
             },
             {
                 "name": "AC",
+                "parents": ["Y", "Z"],
                 "cell": {
                     "row": 12,
                     "column": 10
@@ -468,6 +497,7 @@
             },
             {
                 "name": "AD",
+                "parents": [],
                 "cell": {
                     "row": 13,
                     "column": 7

@@ -1,10 +1,12 @@
 package com.github.rmkane.tools.domain.drawing;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Node {
 
   private String name;
+  private List<String> parents;
   private Cell cell;
   private String alignment;
   private String embelishment;
@@ -12,8 +14,15 @@ public class Node {
 
   public Node() {}
 
-  public Node(String name, Cell cell, String alignment, String embelishment, States states) {
+  public Node(
+      String name,
+      List<String> parents,
+      Cell cell,
+      String alignment,
+      String embelishment,
+      States states) {
     this.name = name;
+    this.parents = parents;
     this.cell = cell;
     this.alignment = alignment;
     this.embelishment = embelishment;
@@ -26,6 +35,14 @@ public class Node {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public List<String> getParents() {
+    return this.parents;
+  }
+
+  public void setParents(List<String> parents) {
+    this.parents = parents;
   }
 
   public Cell getCell() {
@@ -65,6 +82,11 @@ public class Node {
     return this;
   }
 
+  public Node parents(List<String> parents) {
+    setParents(parents);
+    return this;
+  }
+
   public Node cell(Cell cell) {
     setCell(cell);
     return this;
@@ -93,6 +115,7 @@ public class Node {
     }
     Node node = (Node) o;
     return Objects.equals(name, node.name)
+        && Objects.equals(parents, node.parents)
         && Objects.equals(cell, node.cell)
         && Objects.equals(alignment, node.alignment)
         && Objects.equals(embelishment, node.embelishment)
@@ -101,7 +124,7 @@ public class Node {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, cell, alignment, embelishment, states);
+    return Objects.hash(name, parents, cell, alignment, embelishment, states);
   }
 
   @Override
@@ -109,6 +132,9 @@ public class Node {
     return "{"
         + " name='"
         + getName()
+        + "'"
+        + ", parents='"
+        + getParents()
         + "'"
         + ", cell='"
         + getCell()

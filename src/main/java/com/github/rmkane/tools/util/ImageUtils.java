@@ -2,6 +2,7 @@ package com.github.rmkane.tools.util;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.font.TextLayout;
@@ -95,12 +96,14 @@ public class ImageUtils {
     graphics.setRenderingHint(
         RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 
+    FontMetrics metrics = graphics.getFontMetrics();
     TextLayout textLayout =
         new TextLayout(label, graphics.getFont(), graphics.getFontRenderContext());
-    double textHeight = textLayout.getBounds().getHeight();
-    double textWidth = textLayout.getBounds().getWidth();
 
-    graphics.drawString(label, x - (int) textWidth / 2, y + (int) textHeight / 2);
+    int textWidth = metrics.stringWidth(label);
+    int textHeight = (int) textLayout.getBounds().getHeight();
+
+    graphics.drawString(label, x - textWidth / 2, y + textHeight / 2);
   }
 
   public static BufferedImage loadImage(File imageFile) {
