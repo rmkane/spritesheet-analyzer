@@ -14,7 +14,7 @@ public class Direction {
   }
 
   public String getFrom() {
-    return from;
+    return this.from;
   }
 
   public void setFrom(String from) {
@@ -22,17 +22,29 @@ public class Direction {
   }
 
   public String getTo() {
-    return to;
+    return this.to;
   }
 
   public void setTo(String to) {
     this.to = to;
   }
 
+  public Direction from(String from) {
+    setFrom(from);
+    return this;
+  }
+
+  public Direction to(String to) {
+    setTo(to);
+    return this;
+  }
+
   @Override
   public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (o == this) return true;
+    if (!(o instanceof Direction)) {
+      return false;
+    }
     Direction direction = (Direction) o;
     return Objects.equals(from, direction.from) && Objects.equals(to, direction.to);
   }
@@ -44,6 +56,6 @@ public class Direction {
 
   @Override
   public String toString() {
-    return "{" + "from='" + from + '\'' + ", to='" + to + '\'' + '}';
+    return "{" + " from='" + getFrom() + "'" + ", to='" + getTo() + "'" + "}";
   }
 }

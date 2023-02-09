@@ -42,7 +42,448 @@
                 "states": {
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Long_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Long"
-                }
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "A",
+                    "to": "C"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Long_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Long"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "B",
+                    "to": "D"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "B",
+                    "to": "E"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "C",
+                    "to": "F"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "C",
+                    "to": "G"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "D",
+                    "to": "H"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_160"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "E",
+                    "to": "H"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "F",
+                    "to": "H"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "G",
+                    "to": "H"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_160"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "H",
+                    "to": "I"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_160"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "H",
+                    "to": "J"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Vertical_Enabled",
+                    "enabled": "DarkAlchemy_Line_Vertical"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "H",
+                    "to": "K"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_160"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "I",
+                    "to": "L"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "I",
+                    "to": "M"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "J",
+                    "to": "N"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "J",
+                    "to": "O"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "K",
+                    "to": "P"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "K",
+                    "to": "Q"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "L",
+                    "to": "R"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "M",
+                    "to": "R"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "N",
+                    "to": "S"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "O",
+                    "to": "S"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "P",
+                    "to": "T"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "Q",
+                    "to": "T"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "R",
+                    "to": "S"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
+                    "enabled": "DarkAlchemy_Line_Horizontal"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "R",
+                    "to": "U"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "R",
+                    "to": "V"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "S",
+                    "to": "R"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
+                    "enabled": "DarkAlchemy_Line_Horizontal"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "S",
+                    "to": "T"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
+                    "enabled": "DarkAlchemy_Line_Horizontal"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "S",
+                    "to": "W"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "S",
+                    "to": "X"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "T",
+                    "to": "S"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
+                    "enabled": "DarkAlchemy_Line_Horizontal"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "T",
+                    "to": "Y"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "T",
+                    "to": "Z"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "U",
+                    "to": "AA"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "V",
+                    "to": "AA"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "W",
+                    "to": "AB"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "X",
+                    "to": "AB"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
+            },
+            {
+                "direction": {
+                    "from": "Y",
+                    "to": "AC"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": true
+            },
+            {
+                "direction": {
+                    "from": "Z",
+                    "to": "AC"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
+                },
+                "flipped": false
             }
         ],
         "nodes": [

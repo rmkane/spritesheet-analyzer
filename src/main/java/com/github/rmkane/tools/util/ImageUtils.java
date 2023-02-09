@@ -106,6 +106,27 @@ public class ImageUtils {
     graphics.drawString(label, x - textWidth / 2, y + textHeight / 2);
   }
 
+  public static BufferedImage flipBoth(BufferedImage image) {
+    AffineTransform tx = AffineTransform.getScaleInstance(-1, -1);
+    tx.translate(-image.getWidth(), -image.getHeight());
+    AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+    return op.filter(image, null);
+  }
+
+  public static BufferedImage flipHorizontally(BufferedImage image) {
+    AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+    tx.translate(-image.getWidth(), 0);
+    AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+    return op.filter(image, null);
+  }
+
+  public static BufferedImage flipVertically(BufferedImage image) {
+    AffineTransform tx = AffineTransform.getScaleInstance(1, -1);
+    tx.translate(0, -image.getHeight());
+    AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+    return op.filter(image, null);
+  }
+
   public static BufferedImage loadImage(File imageFile) {
     try {
       return ImageIO.read(imageFile);

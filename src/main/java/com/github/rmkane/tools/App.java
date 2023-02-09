@@ -28,7 +28,7 @@ public class App implements Runnable {
 
     Map<String, SpriteSheet> spritesheets = SpriteSheetService.loadSpritesheets(RESOURCE_ROOT);
 
-    SpriteSheetService.processSpritesheets(spritesheets, OUTPUT_DIR);
+    // SpriteSheetService.processSpritesheets(spritesheets, OUTPUT_DIR);
 
     Drawing drawing = JsonUtils.loadJson(DRAWING_JSON, Drawing.class);
 
