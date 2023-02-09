@@ -33,6 +33,18 @@
                 }
             }
         ],
+        "edges": [
+            {
+                "direction": {
+                    "from": "A",
+                    "to": "B"
+                },
+                "states": {
+                    "disabled": "DarkAlchemy_Line_Diagonal_45_Long_Enabled",
+                    "enabled": "DarkAlchemy_Line_Diagonal_45_Long"
+                }
+            }
+        ],
         "nodes": [
             {
                 "name": "A",

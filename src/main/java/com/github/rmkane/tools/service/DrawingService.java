@@ -1,6 +1,7 @@
 package com.github.rmkane.tools.service;
 
 import com.github.rmkane.tools.domain.drawing.Drawing;
+import com.github.rmkane.tools.domain.drawing.Edge;
 import com.github.rmkane.tools.domain.drawing.Layer;
 import com.github.rmkane.tools.domain.drawing.Node;
 import com.github.rmkane.tools.domain.sprite.SpriteSheet;
@@ -27,11 +28,38 @@ public class DrawingService {
           layer.getOffset().getY());
     }
 
-    // Nodes
+    // Grid
     int gridOffsetX = drawing.getMetadata().getGrid().getOffset().getX();
     int gridOffsetY = drawing.getMetadata().getGrid().getOffset().getY();
     int cellWidth = drawing.getMetadata().getGrid().getSize().getWidth();
     int cellHeight = drawing.getMetadata().getGrid().getSize().getHeight();
+
+    // TODO - Implement
+    // Edges
+    for (Edge edge : drawing.getData().getEdges()) {
+      Node from =
+          drawing.getData().getNodes().stream()
+              .filter(node -> node.getName().equals(edge.getDirection().getFrom()))
+              .findFirst()
+              .get();
+      Node to =
+          drawing.getData().getNodes().stream()
+              .filter(node -> node.getName().equals(edge.getDirection().getTo()))
+              .findFirst()
+              .get();
+      BufferedImage diagonal = spritesheet.extractImage(edge.getStates().getEnabled());
+
+      int x1 = gridOffsetX + from.getCell().getColumn() * cellWidth;
+      int y1 = gridOffsetY + from.getCell().getRow() * cellHeight;
+
+      int x2 = gridOffsetX + to.getCell().getColumn() * cellWidth;
+      int y2 = gridOffsetY + to.getCell().getRow() * cellHeight;
+
+      int x = 200; // x2 - x1;
+      int y = 200; // y2 - y1;
+
+      ImageUtils.draw(diagonal, root, x, y);
+    }
 
     // Draw grid
     int offX = gridOffsetX + (cellWidth * 3);
