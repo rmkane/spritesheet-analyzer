@@ -11,12 +11,6 @@ import java.awt.image.BufferedImage;
 import java.util.Map;
 
 public class DrawingService {
-  private static final boolean SHOW_BACKGROUND = true;
-  private static final boolean SHOW_ICONS = false;
-  private static final boolean SHOW_EDGES = true;
-  private static final boolean SHOW_LABELS = false;
-  private static final boolean SHOW_GRID = false;
-
   public static void render(
       Map<String, SpriteSheet> spritesheets, Drawing drawing, String outputDir) {
 
@@ -26,7 +20,7 @@ public class DrawingService {
     int height = drawing.getMetadata().getSize().getHeight();
     BufferedImage root = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 
-    if (SHOW_BACKGROUND) {
+    if (drawing.getMetadata().getFeatures().getBackground()) {
       for (Layer layer : drawing.getData().getLayers()) {
         ImageUtils.draw(
             spritesheet.extractImage(layer.getName()),
@@ -45,7 +39,7 @@ public class DrawingService {
     float cellOffsetY = cellHeight / 2.0f;
 
     // Edges
-    if (SHOW_EDGES) {
+    if (drawing.getMetadata().getFeatures().getEdges()) {
       for (Edge edge : drawing.getData().getEdges()) {
         Node from =
             drawing.getData().getNodes().stream()
@@ -76,7 +70,7 @@ public class DrawingService {
     }
 
     // Draw grid
-    if (SHOW_GRID) {
+    if (drawing.getMetadata().getFeatures().getGrid()) {
       int offX = gridOffsetX + (cellWidth * 3);
       int offY = gridOffsetY + (cellHeight * 3);
       Color oddColor = new Color(1.0f, 0.0f, 0.5f, 0.33f);
@@ -93,7 +87,7 @@ public class DrawingService {
       float x = gridOffsetX + (cellWidth * column);
       float y = gridOffsetY + (cellHeight * row);
 
-      if (SHOW_ICONS) {
+      if (drawing.getMetadata().getFeatures().getIcons()) {
         BufferedImage embellishment = spritesheet.extractImage(node.getEmbelishment());
         BufferedImage icon = spritesheet.extractImage(node.getStates().getEnabled());
         float offsetX = justify(icon.getWidth(), cellWidth, "center");
@@ -103,7 +97,7 @@ public class DrawingService {
       }
 
       // Draw label
-      if (SHOW_LABELS) {
+      if (drawing.getMetadata().getFeatures().getLabels()) {
         int x1 = (int) (x + cellOffsetX);
         int y1 = (int) (y + cellOffsetY);
         ImageUtils.drawLabelFromCenter(root, node.getName(), x1, y1, Color.GREEN, fontSize);

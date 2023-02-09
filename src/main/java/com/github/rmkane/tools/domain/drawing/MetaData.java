@@ -6,13 +6,15 @@ public class MetaData {
   private String sheet;
   private Grid grid;
   private Dimension size;
+  private Features features;
 
   public MetaData() {}
 
-  public MetaData(String sheet, Grid grid, Dimension size) {
+  public MetaData(String sheet, Grid grid, Dimension size, Features features) {
     this.sheet = sheet;
     this.grid = grid;
     this.size = size;
+    this.features = features;
   }
 
   public String getSheet() {
@@ -39,6 +41,14 @@ public class MetaData {
     this.size = size;
   }
 
+  public Features getFeatures() {
+    return this.features;
+  }
+
+  public void setFeatures(Features features) {
+    this.features = features;
+  }
+
   public MetaData sheet(String sheet) {
     setSheet(sheet);
     return this;
@@ -54,6 +64,11 @@ public class MetaData {
     return this;
   }
 
+  public MetaData features(Features features) {
+    setFeatures(features);
+    return this;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (o == this) return true;
@@ -63,12 +78,13 @@ public class MetaData {
     MetaData metaData = (MetaData) o;
     return Objects.equals(sheet, metaData.sheet)
         && Objects.equals(grid, metaData.grid)
-        && Objects.equals(size, metaData.size);
+        && Objects.equals(size, metaData.size)
+        && Objects.equals(features, metaData.features);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sheet, grid, size);
+    return Objects.hash(sheet, grid, size, features);
   }
 
   @Override
@@ -82,6 +98,9 @@ public class MetaData {
         + "'"
         + ", size='"
         + getSize()
+        + "'"
+        + ", features='"
+        + getFeatures()
         + "'"
         + "}";
   }
