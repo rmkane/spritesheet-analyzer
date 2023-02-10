@@ -9,7 +9,7 @@ public class Node {
   private List<String> parents;
   private Cell cell;
   private String alignment;
-  private String embelishment;
+  private String embellishment;
   private States states;
 
   public Node() {}
@@ -19,13 +19,13 @@ public class Node {
       List<String> parents,
       Cell cell,
       String alignment,
-      String embelishment,
+      String embellishment,
       States states) {
     this.name = name;
     this.parents = parents;
     this.cell = cell;
     this.alignment = alignment;
-    this.embelishment = embelishment;
+    this.embellishment = embellishment;
     this.states = states;
   }
 
@@ -61,12 +61,12 @@ public class Node {
     this.alignment = alignment;
   }
 
-  public String getEmbelishment() {
-    return this.embelishment;
+  public String getEmbellishment() {
+    return this.embellishment;
   }
 
-  public void setEmbelishment(String embelishment) {
-    this.embelishment = embelishment;
+  public void setEmbellishment(String embellishment) {
+    this.embellishment = embellishment;
   }
 
   public States getStates() {
@@ -97,8 +97,8 @@ public class Node {
     return this;
   }
 
-  public Node embelishment(String embelishment) {
-    setEmbelishment(embelishment);
+  public Node embellishment(String embellishment) {
+    setEmbellishment(embellishment);
     return this;
   }
 
@@ -118,13 +118,13 @@ public class Node {
         && Objects.equals(parents, node.parents)
         && Objects.equals(cell, node.cell)
         && Objects.equals(alignment, node.alignment)
-        && Objects.equals(embelishment, node.embelishment)
+        && Objects.equals(embellishment, node.embellishment)
         && Objects.equals(states, node.states);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, parents, cell, alignment, embelishment, states);
+    return Objects.hash(name, parents, cell, alignment, embellishment, states);
   }
 
   @Override
@@ -142,8 +142,8 @@ public class Node {
         + ", alignment='"
         + getAlignment()
         + "'"
-        + ", embelishment='"
-        + getEmbelishment()
+        + ", embellishment='"
+        + getEmbellishment()
         + "'"
         + ", states='"
         + getStates()

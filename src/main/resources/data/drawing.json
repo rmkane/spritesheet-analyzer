@@ -19,10 +19,9 @@
             "background": true,
             "edges": true,
             "grid": false,
-            "icons": false,
+            "icons": true,
             "labels": false
         }
-            
     },
     "data": {
         "layers": [
@@ -50,7 +49,7 @@
                     "column": 7
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_01_Disabled",
                     "enabled": "DarkAlchemy_Node_01_Enabled",
@@ -66,7 +65,7 @@
                     "column": 5
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_02_Disabled",
                     "enabled": "DarkAlchemy_Node_02_Enabled",
@@ -82,7 +81,7 @@
                     "column": 9
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_03_Disabled",
                     "enabled": "DarkAlchemy_Node_03_Enabled",
@@ -98,7 +97,7 @@
                     "column": 4
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_04_Disabled",
                     "enabled": "DarkAlchemy_Node_04_Enabled",
@@ -114,7 +113,7 @@
                     "column": 6
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_05_Disabled",
                     "enabled": "DarkAlchemy_Node_05_Enabled",
@@ -130,7 +129,7 @@
                     "column": 8
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_06_Disabled",
                     "enabled": "DarkAlchemy_Node_06_Enabled",
@@ -146,7 +145,7 @@
                     "column": 10
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_07_Disabled",
                     "enabled": "DarkAlchemy_Node_07_Enabled",
@@ -162,7 +161,7 @@
                     "column": 7
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_08",
+                "embellishment": "DarkAlchemy_Node_Embellishment_08",
                 "states": {
                     "disabled": "DarkAlchemy_Node_08_Disabled",
                     "enabled": "DarkAlchemy_Node_08_Enabled",
@@ -178,7 +177,7 @@
                     "column": 4
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_09_Disabled",
                     "enabled": "DarkAlchemy_Node_09_Enabled",
@@ -194,7 +193,7 @@
                     "column": 7
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_16",
+                "embellishment": "DarkAlchemy_Node_Embellishment_16",
                 "states": {
                     "disabled": "DarkAlchemy_Node_10_Disabled",
                     "enabled": "DarkAlchemy_Node_10_Enabled",
@@ -210,7 +209,7 @@
                     "column": 10
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_11_Disabled",
                     "enabled": "DarkAlchemy_Node_11_Enabled",
@@ -226,7 +225,7 @@
                     "column": 3
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_12_Disabled",
                     "enabled": "DarkAlchemy_Node_12_Enabled",
@@ -242,7 +241,7 @@
                     "column": 5
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_13_Disabled",
                     "enabled": "DarkAlchemy_Node_13_Enabled",
@@ -258,7 +257,7 @@
                     "column": 6
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_14_Disabled",
                     "enabled": "DarkAlchemy_Node_14_Enabled",
@@ -274,7 +273,7 @@
                     "column": 8
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_15_Disabled",
                     "enabled": "DarkAlchemy_Node_15_Enabled",
@@ -290,7 +289,7 @@
                     "column": 9
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_16_Disabled",
                     "enabled": "DarkAlchemy_Node_16_Enabled",
@@ -306,7 +305,7 @@
                     "column": 11
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_17_Disabled",
                     "enabled": "DarkAlchemy_Node_17_Enabled",
@@ -322,7 +321,7 @@
                     "column": 4
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_18_Disabled",
                     "enabled": "DarkAlchemy_Node_18_Enabled",
@@ -338,7 +337,7 @@
                     "column": 7
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_19_Disabled",
                     "enabled": "DarkAlchemy_Node_19_Enabled",
@@ -354,7 +353,7 @@
                     "column": 10
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_20_Disabled",
                     "enabled": "DarkAlchemy_Node_20_Enabled",
@@ -370,7 +369,7 @@
                     "column": 3
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_21_Disabled",
                     "enabled": "DarkAlchemy_Node_21_Enabled",
@@ -386,7 +385,7 @@
                     "column": 5
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_22_Disabled",
                     "enabled": "DarkAlchemy_Node_22_Enabled",
@@ -402,7 +401,7 @@
                     "column": 6
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_23_Disabled",
                     "enabled": "DarkAlchemy_Node_23_Enabled",
@@ -418,7 +417,7 @@
                     "column": 8
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_24_Disabled",
                     "enabled": "DarkAlchemy_Node_24_Enabled",
@@ -434,7 +433,7 @@
                     "column": 9
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_25_Disabled",
                     "enabled": "DarkAlchemy_Node_25_Enabled",
@@ -450,7 +449,7 @@
                     "column": 11
                 },
                 "alignment": "bottom",
-                "embelishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
+                "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
                     "disabled": "DarkAlchemy_Node_26_Disabled",
                     "enabled": "DarkAlchemy_Node_26_Enabled",
@@ -529,7 +528,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Long_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Long"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 2,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -540,7 +543,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Long_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Long"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 1,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -551,7 +558,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 1,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -562,7 +573,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -4,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -573,7 +588,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 8,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -584,7 +603,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 2,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -595,7 +618,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_160"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 0,
+                    "y": 3
+                }
             },
             {
                 "direction": {
@@ -606,7 +633,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 0,
+                    "y": 5
+                }
             },
             {
                 "direction": {
@@ -617,7 +648,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 8,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -628,7 +663,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_160"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 0,
+                    "y": 3
+                }
             },
             {
                 "direction": {
@@ -639,7 +678,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_160"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 0,
+                    "y": 3
+                }
             },
             {
                 "direction": {
@@ -650,7 +693,11 @@
                     "disabled": "DarkAlchemy_Line_Vertical_Enabled",
                     "enabled": "DarkAlchemy_Line_Vertical"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 0,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -661,7 +708,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_160_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_160"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 0,
+                    "y": 2
+                }
             },
             {
                 "direction": {
@@ -672,7 +723,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 4,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -683,7 +738,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -4,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -694,7 +753,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 3,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -705,7 +768,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 0,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -716,7 +783,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 5,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -727,7 +798,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": 1,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -738,7 +813,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -7,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -749,7 +828,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 6,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -760,7 +843,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -5,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -771,7 +858,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 7,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -782,7 +873,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -2,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -793,7 +888,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 6,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -804,7 +903,11 @@
                     "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
                     "enabled": "DarkAlchemy_Line_Horizontal"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 0,
+                    "y": 5
+                }
             },
             {
                 "direction": {
@@ -815,7 +918,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 6,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -826,7 +933,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -7,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -837,7 +948,11 @@
                     "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
                     "enabled": "DarkAlchemy_Line_Horizontal"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 0,
+                    "y": 5
+                }
             },
             {
                 "direction": {
@@ -848,7 +963,11 @@
                     "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
                     "enabled": "DarkAlchemy_Line_Horizontal"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 0,
+                    "y": 5
+                }
             },
             {
                 "direction": {
@@ -859,7 +978,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 7,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -870,7 +993,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -4,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -881,7 +1008,11 @@
                     "disabled": "DarkAlchemy_Line_Horizontal_Enabled",
                     "enabled": "DarkAlchemy_Line_Horizontal"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 0,
+                    "y": 5
+                }
             },
             {
                 "direction": {
@@ -892,7 +1023,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 7,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -903,7 +1038,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -2,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -914,7 +1053,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -10,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -925,7 +1068,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 9,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -936,7 +1083,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -6,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -947,7 +1098,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 9,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -958,7 +1113,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": true
+                "flipped": true,
+                "nudge": {
+                    "x": -3,
+                    "y": 0
+                }
             },
             {
                 "direction": {
@@ -969,7 +1128,11 @@
                     "disabled": "DarkAlchemy_Line_Diagonal_45_Short_Enabled",
                     "enabled": "DarkAlchemy_Line_Diagonal_45_Short"
                 },
-                "flipped": false
+                "flipped": false,
+                "nudge": {
+                    "x": 13,
+                    "y": 0
+                }
             }
         ]
     }

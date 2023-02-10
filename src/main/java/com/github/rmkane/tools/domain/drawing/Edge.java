@@ -6,13 +6,15 @@ public class Edge {
   private Direction direction;
   private States states;
   private Boolean flipped;
+  private Point nudge;
 
   public Edge() {}
 
-  public Edge(Direction direction, States states, Boolean flipped) {
+  public Edge(Direction direction, States states, Boolean flipped, Point nudge) {
     this.direction = direction;
     this.states = states;
     this.flipped = flipped;
+    this.nudge = nudge;
   }
 
   public Direction getDirection() {
@@ -43,6 +45,14 @@ public class Edge {
     this.flipped = flipped;
   }
 
+  public Point getNudge() {
+    return this.nudge;
+  }
+
+  public void setNudge(Point nudge) {
+    this.nudge = nudge;
+  }
+
   public Edge direction(Direction direction) {
     setDirection(direction);
     return this;
@@ -58,6 +68,11 @@ public class Edge {
     return this;
   }
 
+  public Edge nudge(Point nudge) {
+    setNudge(nudge);
+    return this;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (o == this) return true;
@@ -67,12 +82,13 @@ public class Edge {
     Edge edge = (Edge) o;
     return Objects.equals(direction, edge.direction)
         && Objects.equals(states, edge.states)
-        && Objects.equals(flipped, edge.flipped);
+        && Objects.equals(flipped, edge.flipped)
+        && Objects.equals(nudge, edge.nudge);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(direction, states, flipped);
+    return Objects.hash(direction, states, flipped, nudge);
   }
 
   @Override
@@ -86,6 +102,9 @@ public class Edge {
         + "'"
         + ", flipped='"
         + isFlipped()
+        + "'"
+        + ", nudge='"
+        + getNudge()
         + "'"
         + "}";
   }

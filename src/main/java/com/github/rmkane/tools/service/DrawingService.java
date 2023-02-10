@@ -6,11 +6,14 @@ import com.github.rmkane.tools.domain.drawing.Layer;
 import com.github.rmkane.tools.domain.drawing.Node;
 import com.github.rmkane.tools.domain.sprite.SpriteSheet;
 import com.github.rmkane.tools.util.ImageUtils;
-import java.awt.Color;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Map;
 
 public class DrawingService {
+
+  private static final boolean DEBUG = false;
+
   public static void render(
       Map<String, SpriteSheet> spritesheets, Drawing drawing, String outputDir) {
 
@@ -40,6 +43,8 @@ public class DrawingService {
 
     // Edges
     if (drawing.getMetadata().getFeatures().getEdges()) {
+      float initialOffsetX = gridOffsetX + cellOffsetX;
+      float initialOffsetY = gridOffsetY + cellOffsetY;
       for (Edge edge : drawing.getData().getEdges()) {
         Node from =
             drawing.getData().getNodes().stream()
@@ -52,20 +57,40 @@ public class DrawingService {
                 .findFirst()
                 .get();
         BufferedImage diagonal = spritesheet.extractImage(edge.getStates().getEnabled());
-        float x1 = gridOffsetX + cellOffsetX + from.getCell().getColumn() * cellWidth;
-        float y1 = gridOffsetY + cellOffsetX + from.getCell().getRow() * cellHeight;
-        float x2 = gridOffsetX + cellOffsetX + to.getCell().getColumn() * cellWidth;
-        float y2 = gridOffsetY + cellOffsetX + to.getCell().getRow() * cellHeight;
+        float x1 = initialOffsetX + from.getCell().getColumn() * cellWidth;
+        float y1 = initialOffsetY + from.getCell().getRow() * cellHeight;
+        float x2 = initialOffsetX + to.getCell().getColumn() * cellWidth;
+        float y2 = initialOffsetY + to.getCell().getRow() * cellHeight;
         float x3 = (x1 + x2) / 2.0f;
         float y3 = (y1 + y2) / 2.0f;
-        float offX = diagonal.getWidth() / 2;
-        float offY = diagonal.getHeight() / 2;
+        float offX = diagonal.getWidth() / 2.0f;
+        float offY = diagonal.getHeight() / 2.0f;
+        int nudgeX = edge.getNudge().getX();
+        int nudgeY = edge.getNudge().getY();
+        int centerX = (int) (x3 - offX + nudgeX);
+        int centerY = (int) (y3 - offY + nudgeY);
 
         if (edge.getFlipped()) {
           diagonal = ImageUtils.flipHorizontally(diagonal);
         }
 
-        ImageUtils.draw(diagonal, root, (int) (x3 - offX), (int) (y3 - offY));
+        ImageUtils.draw(diagonal, root, centerX, centerY);
+
+        if (DEBUG) {
+          Graphics2D g = (Graphics2D) root.getGraphics();
+
+          g.setColor(new Color(1.0f, 0.3f, 1.0f, 0.5f));
+          g.fillRect(centerX, centerY, diagonal.getWidth(), diagonal.getHeight());
+
+          g.setColor(new Color(0.3f, 1.0f, 0.3f, 0.8f));
+          g.fillOval((int) (x1 - 4), (int) (y1 - 4), 8, 8);
+
+          g.setColor(new Color(0.3f, 1.0f, 0.3f, 0.8f));
+          g.fillOval((int) (x2 - 4), (int) (y2 - 4), 8, 8);
+
+          g.setColor(new Color(1.0f, 1.0f, 0.3f, 0.8f));
+          g.fillOval((int) (x3 - 4), (int) (y3 - 4), 8, 8);
+        }
       }
     }
 
@@ -88,7 +113,7 @@ public class DrawingService {
       float y = gridOffsetY + (cellHeight * row);
 
       if (drawing.getMetadata().getFeatures().getIcons()) {
-        BufferedImage embellishment = spritesheet.extractImage(node.getEmbelishment());
+        BufferedImage embellishment = spritesheet.extractImage(node.getEmbellishment());
         BufferedImage icon = spritesheet.extractImage(node.getStates().getEnabled());
         float offsetX = justify(icon.getWidth(), cellWidth, "center");
         float offsetY = align(icon.getHeight(), cellHeight, node.getAlignment());
@@ -111,7 +136,7 @@ public class DrawingService {
   public static float align(int sourceHeight, int targetHeight, String alignment) {
     switch (alignment) {
       case "middle":
-        return (targetHeight - sourceHeight) / 2;
+        return (targetHeight - sourceHeight) / 2.0f;
       case "bottom":
         return targetHeight - sourceHeight;
       case "top":
@@ -123,7 +148,7 @@ public class DrawingService {
   public static float justify(int sourceWidth, int targetWidth, String justification) {
     switch (justification) {
       case "center":
-        return (targetWidth - sourceWidth) / 2;
+        return (targetWidth - sourceWidth) / 2.0f;
       case "right":
         return targetWidth - sourceWidth;
       case "left":
