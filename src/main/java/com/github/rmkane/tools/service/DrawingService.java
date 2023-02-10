@@ -105,7 +105,7 @@ public class DrawingService {
     }
 
     // Draw nodes
-    int fontSize = (int) (cellHeight * 0.667);
+    int fontSize = (int) (cellHeight * 0.5);
     for (Node node : drawing.getData().getNodes()) {
       int row = node.getCell().getRow();
       int column = node.getCell().getColumn();

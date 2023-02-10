@@ -20,7 +20,7 @@
             "edges": true,
             "grid": false,
             "icons": true,
-            "labels": false
+            "labels": true
         }
     },
     "data": {
@@ -179,10 +179,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_09_Disabled",
-                    "enabled": "DarkAlchemy_Node_09_Enabled",
-                    "mouseover": "DarkAlchemy_Node_09_Mouseover",
-                    "pushed": "DarkAlchemy_Node_09_Pushed"
+                    "disabled": "DarkAlchemy_Node_15_Disabled",
+                    "enabled": "DarkAlchemy_Node_15_Enabled",
+                    "mouseover": "DarkAlchemy_Node_15_Mouseover",
+                    "pushed": "DarkAlchemy_Node_15_Pushed"
                 }
             },
             {
@@ -195,10 +195,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_16",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_10_Disabled",
-                    "enabled": "DarkAlchemy_Node_10_Enabled",
-                    "mouseover": "DarkAlchemy_Node_10_Mouseover",
-                    "pushed": "DarkAlchemy_Node_10_Pushed"
+                    "disabled": "DarkAlchemy_Node_16_Disabled",
+                    "enabled": "DarkAlchemy_Node_16_Enabled",
+                    "mouseover": "DarkAlchemy_Node_16_Mouseover",
+                    "pushed": "DarkAlchemy_Node_16_Pushed"
                 }
             },
             {
@@ -211,10 +211,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_11_Disabled",
-                    "enabled": "DarkAlchemy_Node_11_Enabled",
-                    "mouseover": "DarkAlchemy_Node_11_Mouseover",
-                    "pushed": "DarkAlchemy_Node_11_Pushed"
+                    "disabled": "DarkAlchemy_Node_17_Disabled",
+                    "enabled": "DarkAlchemy_Node_17_Enabled",
+                    "mouseover": "DarkAlchemy_Node_17_Mouseover",
+                    "pushed": "DarkAlchemy_Node_17_Pushed"
                 }
             },
             {
@@ -227,10 +227,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_12_Disabled",
-                    "enabled": "DarkAlchemy_Node_12_Enabled",
-                    "mouseover": "DarkAlchemy_Node_12_Mouseover",
-                    "pushed": "DarkAlchemy_Node_12_Pushed"
+                    "disabled": "DarkAlchemy_Node_09_Disabled",
+                    "enabled": "DarkAlchemy_Node_09_Enabled",
+                    "mouseover": "DarkAlchemy_Node_09_Mouseover",
+                    "pushed": "DarkAlchemy_Node_09_Pushed"
                 }
             },
             {
@@ -243,10 +243,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_13_Disabled",
-                    "enabled": "DarkAlchemy_Node_13_Enabled",
-                    "mouseover": "DarkAlchemy_Node_13_Mouseover",
-                    "pushed": "DarkAlchemy_Node_13_Pushed"
+                    "disabled": "DarkAlchemy_Node_10_Disabled",
+                    "enabled": "DarkAlchemy_Node_10_Enabled",
+                    "mouseover": "DarkAlchemy_Node_10_Mouseover",
+                    "pushed": "DarkAlchemy_Node_10_Pushed"
                 }
             },
             {
@@ -259,10 +259,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_14_Disabled",
-                    "enabled": "DarkAlchemy_Node_14_Enabled",
-                    "mouseover": "DarkAlchemy_Node_14_Mouseover",
-                    "pushed": "DarkAlchemy_Node_14_Pushed"
+                    "disabled": "DarkAlchemy_Node_11_Disabled",
+                    "enabled": "DarkAlchemy_Node_11_Enabled",
+                    "mouseover": "DarkAlchemy_Node_11_Mouseover",
+                    "pushed": "DarkAlchemy_Node_11_Pushed"
                 }
             },
             {
@@ -275,10 +275,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_15_Disabled",
-                    "enabled": "DarkAlchemy_Node_15_Enabled",
-                    "mouseover": "DarkAlchemy_Node_15_Mouseover",
-                    "pushed": "DarkAlchemy_Node_15_Pushed"
+                    "disabled": "DarkAlchemy_Node_12_Disabled",
+                    "enabled": "DarkAlchemy_Node_12_Enabled",
+                    "mouseover": "DarkAlchemy_Node_12_Mouseover",
+                    "pushed": "DarkAlchemy_Node_12_Pushed"
                 }
             },
             {
@@ -291,10 +291,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_16_Disabled",
-                    "enabled": "DarkAlchemy_Node_16_Enabled",
-                    "mouseover": "DarkAlchemy_Node_16_Mouseover",
-                    "pushed": "DarkAlchemy_Node_16_Pushed"
+                    "disabled": "DarkAlchemy_Node_13_Disabled",
+                    "enabled": "DarkAlchemy_Node_13_Enabled",
+                    "mouseover": "DarkAlchemy_Node_13_Mouseover",
+                    "pushed": "DarkAlchemy_Node_13_Pushed"
                 }
             },
             {
@@ -307,10 +307,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_17_Disabled",
-                    "enabled": "DarkAlchemy_Node_17_Enabled",
-                    "mouseover": "DarkAlchemy_Node_17_Mouseover",
-                    "pushed": "DarkAlchemy_Node_17_Pushed"
+                    "disabled": "DarkAlchemy_Node_14_Disabled",
+                    "enabled": "DarkAlchemy_Node_14_Enabled",
+                    "mouseover": "DarkAlchemy_Node_14_Mouseover",
+                    "pushed": "DarkAlchemy_Node_14_Pushed"
                 }
             },
             {
@@ -323,10 +323,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_18_Disabled",
-                    "enabled": "DarkAlchemy_Node_18_Enabled",
-                    "mouseover": "DarkAlchemy_Node_18_Mouseover",
-                    "pushed": "DarkAlchemy_Node_18_Pushed"
+                    "disabled": "DarkAlchemy_Node_24_Disabled",
+                    "enabled": "DarkAlchemy_Node_24_Enabled",
+                    "mouseover": "DarkAlchemy_Node_24_Mouseover",
+                    "pushed": "DarkAlchemy_Node_24_Pushed"
                 }
             },
             {
@@ -339,10 +339,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_19_Disabled",
-                    "enabled": "DarkAlchemy_Node_19_Enabled",
-                    "mouseover": "DarkAlchemy_Node_19_Mouseover",
-                    "pushed": "DarkAlchemy_Node_19_Pushed"
+                    "disabled": "DarkAlchemy_Node_25_Disabled",
+                    "enabled": "DarkAlchemy_Node_25_Enabled",
+                    "mouseover": "DarkAlchemy_Node_25_Mouseover",
+                    "pushed": "DarkAlchemy_Node_25_Pushed"
                 }
             },
             {
@@ -355,10 +355,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_20_Disabled",
-                    "enabled": "DarkAlchemy_Node_20_Enabled",
-                    "mouseover": "DarkAlchemy_Node_20_Mouseover",
-                    "pushed": "DarkAlchemy_Node_20_Pushed"
+                    "disabled": "DarkAlchemy_Node_26_Disabled",
+                    "enabled": "DarkAlchemy_Node_26_Enabled",
+                    "mouseover": "DarkAlchemy_Node_26_Mouseover",
+                    "pushed": "DarkAlchemy_Node_26_Pushed"
                 }
             },
             {
@@ -371,10 +371,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_21_Disabled",
-                    "enabled": "DarkAlchemy_Node_21_Enabled",
-                    "mouseover": "DarkAlchemy_Node_21_Mouseover",
-                    "pushed": "DarkAlchemy_Node_21_Pushed"
+                    "disabled": "DarkAlchemy_Node_18_Disabled",
+                    "enabled": "DarkAlchemy_Node_18_Enabled",
+                    "mouseover": "DarkAlchemy_Node_18_Mouseover",
+                    "pushed": "DarkAlchemy_Node_18_Pushed"
                 }
             },
             {
@@ -387,10 +387,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_22_Disabled",
-                    "enabled": "DarkAlchemy_Node_22_Enabled",
-                    "mouseover": "DarkAlchemy_Node_22_Mouseover",
-                    "pushed": "DarkAlchemy_Node_22_Pushed"
+                    "disabled": "DarkAlchemy_Node_19_Disabled",
+                    "enabled": "DarkAlchemy_Node_19_Enabled",
+                    "mouseover": "DarkAlchemy_Node_19_Mouseover",
+                    "pushed": "DarkAlchemy_Node_19_Pushed"
                 }
             },
             {
@@ -403,10 +403,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_23_Disabled",
-                    "enabled": "DarkAlchemy_Node_23_Enabled",
-                    "mouseover": "DarkAlchemy_Node_23_Mouseover",
-                    "pushed": "DarkAlchemy_Node_23_Pushed"
+                    "disabled": "DarkAlchemy_Node_20_Disabled",
+                    "enabled": "DarkAlchemy_Node_20_Enabled",
+                    "mouseover": "DarkAlchemy_Node_20_Mouseover",
+                    "pushed": "DarkAlchemy_Node_20_Pushed"
                 }
             },
             {
@@ -419,10 +419,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_24_Disabled",
-                    "enabled": "DarkAlchemy_Node_24_Enabled",
-                    "mouseover": "DarkAlchemy_Node_24_Mouseover",
-                    "pushed": "DarkAlchemy_Node_24_Pushed"
+                    "disabled": "DarkAlchemy_Node_21_Disabled",
+                    "enabled": "DarkAlchemy_Node_21_Enabled",
+                    "mouseover": "DarkAlchemy_Node_21_Mouseover",
+                    "pushed": "DarkAlchemy_Node_21_Pushed"
                 }
             },
             {
@@ -435,10 +435,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_25_Disabled",
-                    "enabled": "DarkAlchemy_Node_25_Enabled",
-                    "mouseover": "DarkAlchemy_Node_25_Mouseover",
-                    "pushed": "DarkAlchemy_Node_25_Pushed"
+                    "disabled": "DarkAlchemy_Node_22_Disabled",
+                    "enabled": "DarkAlchemy_Node_22_Enabled",
+                    "mouseover": "DarkAlchemy_Node_22_Mouseover",
+                    "pushed": "DarkAlchemy_Node_22_Pushed"
                 }
             },
             {
@@ -451,10 +451,10 @@
                 "alignment": "bottom",
                 "embellishment": "DarkAlchemy_Node_Embellishment_ABCDEFGH",
                 "states": {
-                    "disabled": "DarkAlchemy_Node_26_Disabled",
-                    "enabled": "DarkAlchemy_Node_26_Enabled",
-                    "mouseover": "DarkAlchemy_Node_26_Mouseover",
-                    "pushed": "DarkAlchemy_Node_26_Pushed"
+                    "disabled": "DarkAlchemy_Node_23_Disabled",
+                    "enabled": "DarkAlchemy_Node_23_Enabled",
+                    "mouseover": "DarkAlchemy_Node_23_Mouseover",
+                    "pushed": "DarkAlchemy_Node_23_Pushed"
                 }
             },
             {
